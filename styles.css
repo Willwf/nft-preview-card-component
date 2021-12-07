@@ -34,10 +34,41 @@ body {
   padding: 2rem 2.5rem 3rem;
 }
 
-.img-equilibrium {
+.img-container {
+  position: relative;
+  width: 100%;
   max-width: 100%;
-  max-height: 100%;
+}
+
+.img-equilibrium {
+  width: 100%;
+  height: auto;
   border-radius: 5%;
+}
+
+.view-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #00fff781;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.img-container:hover .view-overlay {
+  opacity: 1;
+}
+
+.view-overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .nft-title {
@@ -45,6 +76,12 @@ body {
   font-size: 2.5rem;
   font-weight: 400;
   margin: 2rem 0;
+}
+
+.nft-title:hover {
+  color: #00fff8;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
 
 .nft-description {
@@ -103,4 +140,10 @@ body {
 
 .user-creator p span {
   color: hsl(0, 0%, 100%);
+}
+
+.user-creator p span:hover {
+  color: #00fff8;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
